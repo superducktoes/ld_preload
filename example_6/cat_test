@@ -1,0 +1,1 @@
+LD_PRELOAD=./inject.so cat $1
