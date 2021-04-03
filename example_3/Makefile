@@ -2,9 +2,8 @@ TARGET = example_3
 
 all: main.c
 	@gcc main.c -o ${TARGET}
-	@gcc -shared -fPIC inject.c -o inject.so
 run:
-	@LD_PRELOAD=./inject.so ./${TARGET}
+	@./${TARGET}
 
 readelf:
 	readelf -h ./{$TARGET}
