@@ -6,4 +6,5 @@ Example 1: Random number generator
 Example 2: Injected random number generator  
 Example 3: Guess the password  
 Example 4: Injected guess the password  
-Example 5: Inject and return to syscall guess the password  
+Example 5: Inject and return to syscall guess the password
+Example 6: Inject write() and post data  
