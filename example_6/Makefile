@@ -11,5 +11,7 @@ ldd:
 	ldd ./${TARGET}
 strace:
 	strace ./${TARGET}
+start_server:
+	node server.js &
 clean:
 	rm -f *~

