@@ -3,6 +3,7 @@ var http = require("http");
 var server = http.createServer(function(req,res) {
 
     if(req.method === "GET") {
+	console.log("GETTING COMMAND");
 	if (req.url == "/command") {
 	    res.writeHead(200, {"Content-Type": "text/html"});
 	    res.write("ls");
